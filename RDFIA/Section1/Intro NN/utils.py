@@ -14,7 +14,7 @@ class CirclesData:
         self._Xgrid = np.array([x1.flatten(), x2.flatten()]).T.astype('float32')
 
         # Real data
-        circles = scipy.io.loadmat("circles.mat")
+        circles = scipy.io.loadmat("data/circles.mat")
         self._Xtrain, self._Xtest, self._Ytrain, self._Ytest = circles["Xtrain"].astype('float32'), circles["Xtest"].astype('float32'), circles["Ytrain"].astype('float32'), circles["Ytest"].astype('float32')
 
         self._Xgrid_th = torch.from_numpy(self._Xgrid)
@@ -82,7 +82,7 @@ class MNISTData:
 
     def __init__(self):
         # Real data
-        mnist = scipy.io.loadmat("mnist.mat")
+        mnist = scipy.io.loadmat("data/mnist.mat")
         self._Xtrain_th = torch.from_numpy(mnist["Xtrain"].astype('float32'))
         self._Xtest_th = torch.from_numpy(mnist["Xtest"].astype('float32'))
         self._Ytrain_th = torch.from_numpy(mnist["Ytrain"].astype('float32'))
