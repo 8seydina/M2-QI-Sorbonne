@@ -1,7 +1,7 @@
 # This code implements a neural network for forward and backward propagation "by hand".
 # It allows you to manually initialize parameters, perform forward passes, compute loss and accuracy, 
 # and update parameters using gradients calculated during backpropagation.
-
+from utils import *
 
 def init_params(nx, nh, ny):
     """
